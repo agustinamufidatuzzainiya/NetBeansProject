@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UTS">
+  <ClassDiagramComponents>
+    <Class name="Avanza" package="UTS" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="platNomor" returnType="void" visibility="protected"/>
+        <Method name="transmisi" returnType="void" visibility="protected"/>
+        <Method name="merk" returnType="void" visibility="protected"/>
+        <Method name="kapasitasTangki" returnType="void" visibility="protected"/>
+        <Method name="kecepatan" returnType="void" visibility="protected"/>
+        <Method name="harga" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="Beat" package="UTS" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="platNomor" returnType="void" visibility="protected"/>
+        <Method name="transmisi" returnType="void" visibility="protected"/>
+        <Method name="merk" returnType="void" visibility="protected"/>
+        <Method name="kapasitasTangki" returnType="void" visibility="protected"/>
+        <Method name="kecepatan" returnType="void" visibility="protected"/>
+        <Method name="harga" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="HondaMobilio" package="UTS" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="platNomor" returnType="void" visibility="protected"/>
+        <Method name="transmisi" returnType="void" visibility="protected"/>
+        <Method name="merk" returnType="void" visibility="protected"/>
+        <Method name="kapasitasTangki" returnType="void" visibility="protected"/>
+        <Method name="kecepatan" returnType="void" visibility="protected"/>
+        <Method name="harga" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="Kendaraan" package="UTS" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="jenisKendaraan" type="String" visibility="private"/>
+        <Field name="kapasitasTangki" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getJumlahRoda" returnType="String" visibility="public"/>
+        <Method name="setJumlahRoda" returnType="void" visibility="public">
+          <Argument type="String" name="jumlahRoda"/>
+        </Method>
+        <Method name="getJenisKendaraan" returnType="String" visibility="public"/>
+        <Method name="setJenisKendaraan" returnType="void" visibility="public">
+          <Argument type="String" name="jenisKendaraan"/>
+        </Method>
+        <Method name="getMakeNoise" returnType="String" visibility="public"/>
+        <Method name="setMakeNoise" returnType="void" visibility="public">
+          <Argument type="String" name="makeNoise"/>
+        </Method>
+        <Method name="getWarna" returnType="String" visibility="public"/>
+        <Method name="setWarna" returnType="void" visibility="public">
+          <Argument type="String" name="warna"/>
+        </Method>
+        <Method name="getPlatNomor" returnType="String" visibility="public"/>
+        <Method name="setPlatNomor" returnType="void" visibility="public">
+          <Argument type="String" name="platNomor"/>
+        </Method>
+        <Method name="getTransmisi" returnType="String" visibility="public"/>
+        <Method name="setTransmisi" returnType="void" visibility="public">
+          <Argument type="String" name="transmisi"/>
+        </Method>
+        <Method name="getMerk" returnType="String" visibility="public"/>
+        <Method name="setMerk" returnType="void" visibility="public">
+          <Argument type="String" name="merk"/>
+        </Method>
+        <Method name="getKapasitasTangki" returnType="int" visibility="public"/>
+        <Method name="setKapasitasTangki" returnType="void" visibility="public">
+          <Argument type="int" name="kapasitasTangki"/>
+        </Method>
+        <Method name="getKecepatan" returnType="int" visibility="public"/>
+        <Method name="setKecepatan" returnType="void" visibility="public">
+          <Argument type="int" name="kecepatan"/>
+        </Method>
+        <Method name="getHarga" returnType="int" visibility="public"/>
+        <Method name="setHarga" returnType="void" visibility="public">
+          <Argument type="int" name="harga"/>
+        </Method>
+        <Method name="makeNoise" returnType="void" visibility="protected"/>
+        <Method name="eat" returnType="void" visibility="protected"/>
+        <Method name="platNomor" returnType="void" visibility="protected"/>
+        <Method name="transmisi" returnType="void" visibility="protected"/>
+        <Method name="merk" returnType="void" visibility="protected"/>
+        <Method name="harga" returnType="void" visibility="protected"/>
+        <Method name="kecepatan" returnType="void" visibility="protected"/>
+        <Method name="kapasitasTangki" returnType="void" visibility="protected"/>
+        <Method name="jumlahRoda" returnType="void" visibility="protected"/>
+        <Method name="jenisKendaraan" returnType="void" visibility="protected"/>
+        <Method name="warna" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="KendaraanTestDrive" package="UTS" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Mobil" package="UTS" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="warna" type="String[]" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="warna" returnType="void" visibility="protected"/>
+        <Method name="jumlahRoda" returnType="void" visibility="protected"/>
+        <Method name="jenisKendaraan" returnType="void" visibility="protected"/>
+        <Method name="makeNoise" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="Motor" package="UTS" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="warna" type="String[]" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="warna" returnType="void" visibility="protected"/>
+        <Method name="jumlahRoda" returnType="void" visibility="protected"/>
+        <Method name="jenisKendaraan" returnType="void" visibility="protected"/>
+        <Method name="makeNoise" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="PCX" package="UTS" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="platNomor" returnType="void" visibility="protected"/>
+        <Method name="transmisi" returnType="void" visibility="protected"/>
+        <Method name="merk" returnType="void" visibility="protected"/>
+        <Method name="kapasitasTangki" returnType="void" visibility="protected"/>
+        <Method name="kecepatan" returnType="void" visibility="protected"/>
+        <Method name="harga" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="Scoopy" package="UTS" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="platNomor" returnType="void" visibility="protected"/>
+        <Method name="transmisi" returnType="void" visibility="protected"/>
+        <Method name="merk" returnType="void" visibility="protected"/>
+        <Method name="kapasitasTangki" returnType="void" visibility="protected"/>
+        <Method name="kecepatan" returnType="void" visibility="protected"/>
+        <Method name="harga" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="Sigra" package="UTS" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="platNomor" returnType="void" visibility="protected"/>
+        <Method name="transmisi" returnType="void" visibility="protected"/>
+        <Method name="merk" returnType="void" visibility="protected"/>
+        <Method name="kapasitasTangki" returnType="void" visibility="protected"/>
+        <Method name="kecepatan" returnType="void" visibility="protected"/>
+        <Method name="harga" returnType="void" visibility="protected"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="UTS.Mobil" target="UTS.Kendaraan"/>
+    <IsRelation name="is" source="UTS.PCX" target="UTS.Motor"/>
+    <IsRelation name="is" source="UTS.Beat" target="UTS.Motor"/>
+    <IsRelation name="is" source="UTS.HondaMobilio" target="UTS.Mobil"/>
+    <IsRelation name="is" source="UTS.Avanza" target="UTS.Mobil"/>
+    <IsRelation name="is" source="UTS.Scoopy" target="UTS.Motor"/>
+    <IsRelation name="is" source="UTS.Sigra" target="UTS.Mobil"/>
+    <IsRelation name="is" source="UTS.Motor" target="UTS.Kendaraan"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UTSPBO">
+  <ClassDiagramComponents>
+    <Class name="PemberiPakan" package="UTSPBO" visibility="public" xPosition="983.0" yPosition="458.0">
+      <Fields>
+        <Field name="jumlah" type="double" visibility="private"/>
+        <Field name="waktu" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getJumlah" returnType="double" visibility="public"/>
+        <Method name="setJumlah" returnType="void" visibility="public">
+          <Argument type="double" name="c"/>
+        </Method>
+        <Method name="getWaktu" returnType="int" visibility="public"/>
+        <Method name="setWaktu" returnType="void" visibility="public">
+          <Argument type="int" name="d"/>
+        </Method>
+        <Method name="aturan_pakan" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="PenyaringAir" package="UTSPBO" visibility="public" xPosition="466.0" yPosition="179.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="Generator_Oksigen" returnType="void" visibility="package"/>
+        <Method name="Generator_Karbondioksida" returnType="void" visibility="package"/>
+        <Method name="Cooler" returnType="void" visibility="package"/>
+        <Method name="Heater" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="SensorCahaya" package="UTSPBO" visibility="public" xPosition="485.0" yPosition="515.0">
+      <Fields>
+        <Field name="Intensitas_Cahaya" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCahaya" returnType="double" visibility="public"/>
+        <Method name="setCahaya" returnType="void" visibility="public">
+          <Argument type="double" name="b"/>
+        </Method>
+        <Method name="Lampu" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="sensorpH" package="UTSPBO" visibility="public" xPosition="955.0" yPosition="179.0">
+      <Fields>
+        <Field name="PH" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getPH" returnType="double" visibility="public"/>
+        <Method name="setPH" returnType="void" visibility="public">
+          <Argument type="double" name="c"/>
+        </Method>
+        <Method name="KondisiPh" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="TestDriveUTS" package="UTSPBO" visibility="public" xPosition="727.0" yPosition="389.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="UTSPBO.PenyaringAir" target="UTSPBO.TestDriveUTS"/>
+    <IsRelation name="is" source="UTSPBO.SensorCahaya" target="UTSPBO.TestDriveUTS"/>
+    <IsRelation name="is" source="UTSPBO.PemberiPakan" target="UTSPBO.TestDriveUTS"/>
+    <IsRelation name="is" source="UTSPBO.sensorpH" target="UTSPBO.TestDriveUTS"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

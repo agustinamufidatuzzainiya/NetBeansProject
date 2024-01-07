@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Chatbot">
+  <ClassDiagramComponents>
+    <Class name="BuscaDatos" package="chatbot" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="DATABASE" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="fileReader" type="RandomAccessFile" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="translate" returnType="String" visibility="public">
+          <Argument type="String" name="word"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Chatbot" package="chatbot" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FileController" package="chatbot" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="file" type="File" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="fileName"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="File" name="file"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFileContent" returnType="String" visibility="public"/>
+        <Method name="save" returnType="void" visibility="public">
+          <Argument type="String" name="fileContent"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Leer" package="chatbot" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="file" type="File" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="leertxt" returnType="String" visibility="public">
+          <Argument type="String" name="direccion"/>
+        </Method>
+        <Method name="preguntanueva" returnType="String" visibility="public">
+          <Argument type="String" name="pregunta"/>
+          <Argument type="String" name="respuesta"/>
+        </Method>
+        <Method name="guardar" returnType="void" visibility="public">
+          <Argument type="String" name="contenidoAnteriorTxt"/>
+          <Argument type="String" name="nuevapalabra"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="chatbot" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="pregunta" type="String" visibility="package"/>
+        <Field name="reproducciendo" type="boolean" visibility="package"/>
+        <Field name="sonido1" type="AudioClip" visibility="package"/>
+        <Field name="Namebot" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="enviar" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jScrollPane1" type="javax.swing.JScrollPane" visibility="private"/>
+        <Field name="online" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="pantalla" type="javax.swing.JTextArea" visibility="private"/>
+        <Field name="texto" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="enviarActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="generarpregunta" returnType="String" visibility="public"/>
+        <Method name="mitadProbabilidad" returnType="int" visibility="public"/>
+        <Method name="animacionEscribir" returnType="void" visibility="public">
+          <Argument type="String" name="respuestaxd"/>
+        </Method>
+        <Method name="animacionpregunta" returnType="void" visibility="public">
+          <Argument type="String" name="respuestaxd"/>
+        </Method>
+        <Method name="generarRandom" returnType="int" visibility="public"/>
+        <Method name="fijarTexto" returnType="void" visibility="public"/>
+        <Method name="textoActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="enviarPresionado" returnType="JButton" visibility="public"/>
+        <Method name="setPanatalla" returnType="void" visibility="public"/>
+        <Method name="regresaPantalla" returnType="JTextArea" visibility="public"/>
+        <Method name="regresaTexto" returnType="JTextField" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="chatbot.BuscaDatos" target="chatbot.FileController"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

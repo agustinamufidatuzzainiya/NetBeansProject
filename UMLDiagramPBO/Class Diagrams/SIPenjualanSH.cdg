@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="SIPenjualanSH">
+  <ClassDiagramComponents>
+    <Class name="hijab" package="SIPenjualanSH" visibility="public" xPosition="654.0" yPosition="243.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="jenis" package="SIPenjualanSH" visibility="public" xPosition="387.0" yPosition="431.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="merk" package="SIPenjualanSH" visibility="public" xPosition="387.0" yPosition="243.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="pegawai" package="SIPenjualanSH" visibility="public" xPosition="387.0" yPosition="61.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="penjualan_hijab" package="SIPenjualanSH" visibility="public" xPosition="654.0" yPosition="61.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="penjualan_sepatu" package="SIPenjualanSH" visibility="public" xPosition="134.0" yPosition="61.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="sepatu" package="SIPenjualanSH" visibility="public" xPosition="134.0" yPosition="243.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="comp" source="SIPenjualanSH.sepatu" target="SIPenjualanSH.penjualan_sepatu" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="comp" source="SIPenjualanSH.hijab" target="SIPenjualanSH.penjualan_hijab" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="agg" source="SIPenjualanSH.hijab" target="SIPenjualanSH.merk" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="comp" source="SIPenjualanSH.jenis" target="SIPenjualanSH.sepatu" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="comp" source="SIPenjualanSH.pegawai" target="SIPenjualanSH.penjualan_hijab" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="agg" source="SIPenjualanSH.sepatu" target="SIPenjualanSH.merk" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="comp" source="SIPenjualanSH.jenis" target="SIPenjualanSH.hijab" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="comp" source="SIPenjualanSH.pegawai" target="SIPenjualanSH.penjualan_sepatu" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

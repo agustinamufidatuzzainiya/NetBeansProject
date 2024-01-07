@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UtsPbo">
+  <ClassDiagramComponents>
+    <Class name="SystemAquarium" package="" visibility="public" xPosition="502.0" yPosition="160.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SensorPH" package="" visibility="public" xPosition="833.0" yPosition="318.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PengaturSuhu" package="" visibility="public" xPosition="542.0" yPosition="318.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PemberiPakan" package="" visibility="public" xPosition="266.0" yPosition="36.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SensorAirCO2" package="" visibility="public" xPosition="239.0" yPosition="160.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SensorAirO2" package="" visibility="public" xPosition="782.0" yPosition="25.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SensorUdaraCO2" package="" visibility="public" xPosition="239.0" yPosition="290.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SensorUdaraO2" package="" visibility="public" xPosition="815.0" yPosition="171.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="GeneratorO2" package="" visibility="public" xPosition="1052.0" yPosition="88.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FilterAir" package="" visibility="public" xPosition="833.0" yPosition="481.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pemanas" package="" visibility="public" xPosition="450.0" yPosition="534.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pendingin" package="" visibility="public" xPosition="624.0" yPosition="534.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="GeneratorCO2" package="" visibility="public" xPosition="5.0" yPosition="235.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SensorLampu" package="" visibility="public" xPosition="344.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LampuPintar" package="" visibility="public" xPosition="81.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="has" source="SystemAquarium" target="PengaturSuhu" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="SensorAirO2" target="GeneratorO2" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="SystemAquarium" target="PemberiPakan" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="SystemAquarium" target="SensorPH" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="PengaturSuhu" target="Pendingin" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="SystemAquarium" target="SensorAirCO2" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="SystemAquarium" target="SensorUdaraO2" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="SensorUdaraCO2" target="GeneratorCO2" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="SystemAquarium" target="SensorUdaraCO2" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="SensorAirCO2" target="GeneratorCO2" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="SystemAquarium" target="SensorAirO2" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="SensorPH" target="FilterAir" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="SystemAquarium" target="SensorLampu" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="SensorLampu" target="LampuPintar" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="SensorUdaraO2" target="GeneratorO2" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="PengaturSuhu" target="Pemanas" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

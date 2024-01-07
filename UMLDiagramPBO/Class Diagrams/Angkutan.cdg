@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Angkutan">
+  <ClassDiagramComponents>
+    <Class name="Kendaraan" package="Angkutan" visibility="public" xPosition="377.0" yPosition="135.0">
+      <Fields>
+        <Field name="nama" type="String" visibility="private"/>
+        <Field name="No_Plat" type="String" visibility="private"/>
+        <Field name="Merk" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="jalan" returnType="void" visibility="public"/>
+        <Method name="stop" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mobil" package="Angkutan" visibility="public" xPosition="12.0" yPosition="406.0">
+      <Fields>
+        <Field name="warna" type="String" visibility="private"/>
+        <Field name="jenisMobil" type="String" visibility="private"/>
+        <Field name="No_SimA" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="jalan" returnType="void" visibility="public"/>
+        <Method name="tabrak" returnType="String" visibility="public">
+          <Argument type="String" name="tabrak"/>
+        </Method>
+        <Method name="tabrak" returnType="String" visibility="public">
+          <Argument type="String" name="tabrak1"/>
+          <Argument type="String" name="tabrak2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Motor" package="Angkutan" visibility="public" xPosition="675.0" yPosition="276.0">
+      <Fields>
+        <Field name="no_simC" type="String" visibility="private"/>
+        <Field name="jenisHelm" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="jalan" returnType="void" visibility="public"/>
+        <Method name="tabrak" returnType="String" visibility="public">
+          <Argument type="String" name="tabrak"/>
+        </Method>
+        <Method name="tabrak" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Sepeda" package="Angkutan" visibility="public" xPosition="339.0" yPosition="456.0">
+      <Fields>
+        <Field name="jenisSepeda" type="String" visibility="private"/>
+        <Field name="jenisRoda" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="jalan" returnType="void" visibility="public"/>
+        <Method name="tabrak" returnType="String" visibility="public">
+          <Argument type="String" name="tabrak"/>
+        </Method>
+        <Method name="tabrak" returnType="String" visibility="public">
+          <Argument type="String" name="tabrak1"/>
+          <Argument type="String" name="tabrak2"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Angkutan.Motor" target="Angkutan.Kendaraan"/>
+    <IsRelation name="is" source="Angkutan.Mobil" target="Angkutan.Kendaraan"/>
+    <IsRelation name="is" source="Angkutan.Sepeda" target="Angkutan.Kendaraan"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

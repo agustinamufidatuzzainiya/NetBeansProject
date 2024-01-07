@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="tia 4">
+  <ClassDiagramComponents>
+    <Class name="Sensor Ph" package="" visibility="public" xPosition="121.0" yPosition="49.0">
+      <Fields>
+        <Field name="Ph" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Autofeeder" package="" visibility="public" xPosition="433.0" yPosition="228.0">
+      <Fields>
+        <Field name="jumlah" type="double" visibility="private"/>
+        <Field name="time" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Generatoro oksigen" package="" visibility="public" xPosition="4.0" yPosition="228.0">
+      <Fields>
+        <Field name="Oxygen" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="system" package="" visibility="public" xPosition="433.0" yPosition="28.0">
+      <Fields>
+        <Field name="On" type="system" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Sensor suhu" package="" visibility="public" xPosition="722.0" yPosition="28.0">
+      <Fields>
+        <Field name="heater" type="Object" visibility="private"/>
+        <Field name="cooler" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="filterAir" package="" visibility="public" xPosition="96.0" yPosition="442.0">
+      <Fields>
+        <Field name="filterOn" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="FilterOn" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="generator co2" package="" visibility="public" xPosition="214.0" yPosition="228.0">
+      <Fields>
+        <Field name="Co2" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="light " package="" visibility="public" xPosition="702.0" yPosition="237.0">
+      <Fields>
+        <Field name="lightLamp" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="lightLampOn" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="has" source="system" target="light " type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="system" target="Sensor Ph" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="system" target="Autofeeder" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="system" target="Sensor suhu" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation name="jika ph rendah" source="Sensor Ph" target="Generatoro oksigen" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="jika ph tinggi" source="Sensor Ph" target="generator co2" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="aktif" source="Generatoro oksigen" target="filterAir" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="aktif" source="generator co2" target="filterAir" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

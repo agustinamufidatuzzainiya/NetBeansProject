@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="RestoPack">
+  <ClassDiagramComponents>
+    <Class name="Bill" package="RestoPack" visibility="public" xPosition="610.0" yPosition="588.0">
+      <Fields>
+        <Field name="billID" type="int" visibility="private"/>
+        <Field name="customerID" type="int" visibility="private"/>
+        <Field name="PaymentType" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="pay" returnType="void" visibility="public"/>
+        <Method name="cancelPayment" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Chef" package="RestoPack" visibility="public" xPosition="840.0" yPosition="30.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="takeOrder" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Customer" package="RestoPack" visibility="public" xPosition="345.0" yPosition="20.0">
+      <Fields>
+        <Field name="Name" type="String" visibility="private"/>
+        <Field name="ContactNumber" type="int" visibility="private"/>
+        <Field name="CustomerID" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="CheckIn" returnType="void" visibility="public"/>
+        <Method name="CheckOut" returnType="void" visibility="public"/>
+        <Method name="lastVisited" returnType="void" visibility="public"/>
+        <Method name="cancelOrder" returnType="void" visibility="public"/>
+        <Method name="modifyOrder" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MenuItem" package="RestoPack" visibility="public" xPosition="1085.0" yPosition="322.0">
+      <Fields>
+        <Field name="menuItemID" type="int" visibility="private"/>
+        <Field name="take" type="String" visibility="private"/>
+        <Field name="description" type="String" visibility="private"/>
+        <Field name="price" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="UpdatePrice" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Order" package="RestoPack" visibility="public" xPosition="610.0" yPosition="331.0">
+      <Fields>
+        <Field name="OrderID" type="int" visibility="private"/>
+        <Field name="OrderStatus" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="addMenuItem" returnType="void" visibility="public"/>
+        <Method name="removeMenuItem" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Reservation" package="RestoPack" visibility="public" xPosition="61.0" yPosition="231.0">
+      <Fields>
+        <Field name="Reservation_ID" type="int" visibility="private"/>
+        <Field name="Reservation_Time" type="int" visibility="private"/>
+        <Field name="NumberOfPeople" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="CancelReservation" returnType="void" visibility="public"/>
+        <Method name="ChangeReservation" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Table" package="RestoPack" visibility="public" xPosition="61.0" yPosition="531.0">
+      <Fields>
+        <Field name="ID_Table" type="int" visibility="private"/>
+        <Field name="TableStatus" type="String" visibility="private"/>
+        <Field name="MaxCapacity" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="addReservation" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Waiter" package="RestoPack" visibility="public" xPosition="587.0" yPosition="39.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="CreateOrder" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Receptionist" package="" visibility="public" xPosition="80.0" yPosition="39.0">
+      <Fields>
+        <Field name="Name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="CreateReservation" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="for" source="RestoPack.Order" target="RestoPack.Bill" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="takes" source="RestoPack.Waiter" target="RestoPack.Order" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="RestoPack.MenuItem" target="RestoPack.Order"/>
+    <HasRelation name="for" source="RestoPack.Reservation" target="RestoPack.Table" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="makes" source="RestoPack.Customer" target="RestoPack.Order" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="prepare" source="RestoPack.Chef" target="RestoPack.Order" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="creates" source="Receptionist" target="RestoPack.Reservation" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="brought" source="RestoPack.Order" target="RestoPack.Table" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
